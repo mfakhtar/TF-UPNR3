@@ -3,12 +3,12 @@ provider "aws" {
 }
 
 resource "aws_db_instance" "example" {
-  identifier_prefix   = "prod-fawaz-terraform-up-and-running"
+  identifier_prefix   = "fawaz-terraform-up-and-running"
   engine              = "mysql"
   allocated_storage   = 10
   instance_class      = "db.t2.micro"
   skip_final_snapshot = true
-  db_name             = "prod_fawaz_example_database"
+  db_name             = "example_database"
 
   # How should we set the username and password?
   username = var.db_username
